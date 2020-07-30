@@ -1,8 +1,105 @@
+.container h1{
 
+position: absolute;
+width: 56px;
+height: 25px;
+left: 30px;
+top: 17px;
+
+font-family: Avenir;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+color: #000000;
+}
+
+.container h2{
+
+    position: absolute;
+    height: 36px;
+    left: 0%;
+    right: 54.64%;
+    top:92px;
+    padding-left:26px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    color: #000000;
+}
+
+.email label{
+    position: absolute;
+    width: 44px;
+    height: 25px;
+    left: 26px;
+    top: 161px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.email input{
+    position: absolute;
+    width: 362px;
+    height: 40px;
+    left: 26px;
+    top: 190px;
+
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+
+.password{
+    position: absolute;
+    width: 76px;
+    height: 25px;
+    left: 26px;
+    top: 263px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    /* identical to box height */
+    color: #000000;
+}
+
+.password input{
+    position: absolute;
+    width: 362px;
+    height: 40px;
+    left: 0px;
+    top: 25px;
+    background: #F4F4F4;
+    border-radius: 10px;
+}
 
 
 
 input{
     background-color: orange;
     color:white;
+}
+
+.actions input{
+    position: absolute;
+    width: 362px;
+    height: 40px;
+    left: 30px;
+    right:22px;
+    top: 889px;
+    background: #F8BD1C;
+    border-radius: 4px;
+
 }
