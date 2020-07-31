@@ -1,8 +1,8 @@
 class HomeController < ApplicationController
     def index
-        @title = 'TODOapp'
-         end
+    @title = 'TODOapp'
+    end
      
-         def board
-         end
+    def board
+    end
 end
