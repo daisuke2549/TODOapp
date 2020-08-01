@@ -1,0 +1,127 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'variables';
+.title {
+    position: absolute;
+    height: 36px;
+    left: 6%;
+    right: 0%;
+    top: 90px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    color: #000000;
+    
+}
+
+.Rectangle{
+    position: absolute;
+    width: 430px;
+    height: 185px;
+    left: 30px;
+    top: 160px;
+    background: #F4F4F4;
+    border-radius: 10px;
+}
+
+.to_do_list{
+position: absolute;
+height: 25px;
+left: 0%;
+right: 76.79%;
+top: calc(50% - 25px/2 - 12.5px);
+
+font-family: Avenir;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 25px;
+/* identical to box height */
+color: #000000;
+}
+
+.todo_item{
+    position: absolute;
+    height: 19px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 19px/2 + 15.5px);
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    
+    color: #000000;
+    
+    mix-blend-mode: normal;
+    opacity: 0.4; 
+}
+
+.Add_new_board{
+    position: absolute;
+width:430px;
+height: 160px;
+left: 30px;
+top: 360px;
+
+background: #FFFFFF;
+border: 1px dashed rgba(0, 0, 0, 0.2);
+border-radius: 10px;
+background: #F4F4F4;
+}
+
+.Add_new{
+    position: absolute;
+    height: 25px;
+    left: 0.35%;
+    right: 0.35%;
+    top: calc(50% - 25px/2);
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    /* identical to box height */
+    
+    text-align: center;
+    
+    color: #000000;    
+}
+
+.oval1{
+	width: 10px;
+    height: 10px;
+    right: 50px;
+top: 77px;
+position: absolute;
+	background-color: #39a9d6;
+	border-radius: 80px / 50px;
+}
+.oval2{
+	width: 10px;
+    height: 10px;
+    right: 35px;
+top: 77px;
+position: absolute;
+	background-color: #39a9d6;
+	border-radius: 80px / 50px;
+}
+.oval3{
+	width: 10px;
+    height: 10px;
+    right: 20px;
+top: 77px;
+position: absolute;
+	background-color: #39a9d6;
+	border-radius: 80px / 50px;
+}
