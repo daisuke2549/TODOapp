@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Boards</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+     <%= stylesheet_link_tag 'board', media: 'all', 'data-turbolinks-track': 'reload' %>
+     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+<header class="header">  
+<div class="container">
+     <div class="title">
+     All Boards
+     </div>
+</div>
+</header>
+<div class="Rectangle">
+<div class="to_do">
+<div class="to_do_list">
+Brackets
+</div>
+<div class="oval1"> 
+</div>
+<div class="oval2"> 
+</div>
+<div class="oval3"> 
+</div>
+<div class="todo_item">
+Saving money - is something we would all like
+   </div>
+</div>
+</div>
+<div class ="Add_new_board">
+<div class ="Add_new"> 
+<h1>＋ Add new board</h1>
+</div>
+</div>
+<%= yield %>
+</body>
+</html>
