@@ -21,11 +21,11 @@
 <div class="to_do_list">
 Brackets
 </div>
-<div class="oval1"> 
+<div class="edit_dropdown_btn"> 
+<%= image_tag "actions.svg", alt: "Rails icon", class: "edit_dropdown", width: "30px" %>
+<div class="dropdown-content mini">
+<%= link_to '編集する', new_board_path(@board) %>
 </div>
-<div class="oval2"> 
-</div>
-<div class="oval3"> 
 </div>
 <div class="todo_item">
 Saving money - is something we would all like
