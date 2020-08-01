@@ -88,7 +88,7 @@ color: #000000;
 
 
 input{
-    background-color: orange;
+
     color:white;
 }
 
@@ -102,4 +102,109 @@ input{
     background: #F8BD1C;
     border-radius: 4px;
 
+}
+
+input {
+    &.text_field {
+      width: 100%;
+      margin: 8px 0px;
+      padding: 16px 24px;
+      border: 1px solid #EBEBEB;
+      margin-left:65px;
+    }
+  }
+ 
+  label {
+    font-size: 12px;
+  }
+ 
+  textarea {
+    width: 100%;
+    margin: 8px 0px;
+    padding: 8px 8px;
+    min-height: 440px;
+    resize: vertical;
+    border: 1px solid #EBEBEB;
+    margin-left:65px;
+  }
+
+  .new_board{
+      margin-top:100px;
+      width:362px;
+      left:26px;
+
+  }
+  
+
+  .btn-primary{
+      background-color: orange;
+      color:white;
+      
+border-radius: 4px;
+width: 362px;
+height:40px;
+margin-left: 65px;
+margin-top:100px;
+  }
+
+  .title_new_board{
+    position: absolute;
+    height: 36px;
+    left: 26px;
+    right: 0%;
+    top:60px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 36px;
+    margin-left: 40px;
+  }
+
+  .new_board_name{
+     margin-left:65px;
+  }
+  .new_board_name{
+    margin-left:65px;
+ }
+
+ .Description{
+  margin-left:65px;
+ }
+
+ .dropdown-content {
+  font-weight: normal;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+
+  &.mini {
+    min-width: 100px;
+    opacity: 0;
+  }  
+}
+
+.dropdown-content{ 
+  &.mini input:checked ~ .text  {
+    height: auto;
+    opacity: 1; 
+  }
+
+}
+
+.dropdown-content a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
