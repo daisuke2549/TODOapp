@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html>
   <head>
     <title>Boards</title>
     <%= csrf_meta_tags %>
@@ -8,7 +6,6 @@
      <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
-   <body>
 <header class="header">  
 <div class="container">
      <div class="title">
@@ -16,30 +13,27 @@
      </div>
 </div>
 </header>
-<% @boards.each do |board| %>
-<div class="Rectangle">
-<div class="to_do">
-<div class="to_do_list">
-<%= board.title %>
+<% @boards.each do |board|%>
+  <div class="Rectangle">
+    <div class="to_do">
+        <div class="to_do_list">
+        <%= board.title %>
+        </div>
+        < class="edit_dropdown_btn"> 
+        <%= image_tag "actions.svg", alt: "Rails icon", class: "edit_dropdown", width: "30px" %>
+        <div class="dropdown-content mini">
+        <%= link_to '編集する', new_board_path(@board) %>
+        </div>
+        </div>
+        </div>
+        <div class="todo_item">
+    <%= board.content %>
+  </div>
+<% end %>
 </div>
-<div class="edit_dropdown_btn"> 
-<%= image_tag "actions.svg", alt: "Rails icon", class: "edit_dropdown", width: "30px" %>
-<div class="dropdown-content mini">
-<%= link_to '編集する', new_board_path(@board) %>
-</div>
-</div>
-
-<div class="todo_item">
-<%= board.content %>
-   </div>
-</div>
+<%= link_to new_board_path do %>
+<div class ="Add_new"> 
+<p class="Add_new_title">+ Add new board</p>
 </div>
 <% end %>
-<div class ="Add_new_board">
-<div class ="Add_new"> 
-<%= link_to 'Add new board', new_board_path(@board) %>
 </div>
-</div>
-<%= yield %>
-</body>
-</html>
