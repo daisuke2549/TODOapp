@@ -1,2 +1,3 @@
-class BoardsController < ApplicationController
+class Board < ApplicationController
 end
+
