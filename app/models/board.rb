@@ -1,3 +1,2 @@
-class Board < ApplicationController
+class Board < ApplicationRecord
 end
-

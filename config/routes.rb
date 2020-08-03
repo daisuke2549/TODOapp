@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   get '/' => 'home#index'
   get '/board' => 'boards#index'
-
+  get '/board/new' => 'boards#new'
   resources :board, only:[:show, :new, :create, :edit, :update]
 end
 
