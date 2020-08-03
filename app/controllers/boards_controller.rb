@@ -1,21 +1,20 @@
 class BoardsController < ApplicationController
        
-    def index
-        @boards = Board.first
+  def index
+    @boards = Board.all
     end
 
-    def new
-        @board = Board.new
-    end
+  def new
+   end
 
     def show
         @board = Board.find(params[:id])
     end
     
     def create
-        @article = current_user.articles.build(article_params)
-        if @article.save
-          redirect_to article_path(@article), notice: '保存できたよ'
+        @board = current_user.boards.build(article_params)
+        if @board.save
+          redirect_to board_path(@board), notice: '保存できました'
         else
           flash.now[:error] = '保存に失敗しました'
           render :new
