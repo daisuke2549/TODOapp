@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get '/' => 'home#index'
   get '/board' => 'boards#index'
   get '/board/new' => 'boards#new'
+  get '/board/:id/edit' => 'boards#edit'
+  put '/board'    => 'boards#index'
+  post '/board'    => 'boards#index'
+  post '/board/new'    => 'boards#new'
+     
   resources :board, only:[:show, :new, :create, :edit, :update]
 end
 
