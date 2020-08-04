@@ -3,12 +3,14 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 @import 'variables';
-.title {
+.container h1 {
+
     position: absolute;
     height: 36px;
-    left: 6%;
+    left: 26px;
     right: 0%;
-    top: 90px;
+    margin-top:90px;
+    float:left;
     
     font-family: Avenir;
     font-style: normal;
@@ -17,22 +19,22 @@
     line-height: 36px;
     /* identical to box height */
     
-    color: #000000;
     
+    color: #000000;
 }
 
-.Rectangle{
+.card{
     position: absolute;
     width: 430px;
-    height: 185px;
+    height: 160px;
     left: 30px;
     top: 160px;
-    background: #F4F4F4;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
 
-.to_do_list{
-position: absolute;
+.card_title{
+    position: absolute;
 height: 25px;
 left: 0%;
 right: 76.79%;
@@ -41,45 +43,68 @@ top: calc(50% - 25px/2 - 12.5px);
 font-family: Avenir;
 font-style: normal;
 font-weight: normal;
-font-size: 14px;
+font-size: 18px;
 line-height: 25px;
 /* identical to box height */
+
+
+
+color:black;
+}
+
+.article_detail_actions{
+    position: absolute;
+width: 6px;
+height: 6px;
+left: 352px;
+top: 200px;
+
+background: #000000;
+}
+
+.card_content{
+position: absolute;
+height: 21px;
+left: 0%;
+right: 0%;
+top: calc(50% - 19px/2 + 15.5px);
+
+font-family: Avenir;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 19px;
+
 color: #000000;
+
+mix-blend-mode: normal;
+opacity: 0.4;
 }
 
-.todo_item{
+
+
+.card_new{
     position: absolute;
-    height: 19px;
-    left: 0%;
-    right: 0%;
-    top: calc(50% - 19px/2 + 15.5px);
+    width: 430px;
+    height: 160px;
+    left: 30px;
+    top: 348px;
     
-    font-family: Avenir;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 19px;
-    
-    color: #000000;
-    
-    mix-blend-mode: normal;
-    opacity: 0.4; 
-}
+    background: #FFFFFF;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
 
-.Add_new_board{
+}
+.card_detail{
     position: absolute;
-width:430px;
-height: 160px;
-left: 30px;
-top: 360px;
-
-background: #FFFFFF;
-border: 1px dashed rgba(0, 0, 0, 0.2);
-border-radius: 10px;
-background: #F4F4F4;
+width: 30px;
+height: 30px;
+left: 5px;
+top: 110px;
 }
 
-.Add_new{
+
+.card_new_title{
     position: absolute;
     height: 25px;
     left: 0.35%;
@@ -102,5 +127,54 @@ background: #F4F4F4;
     margin-top:66px;
     width: 6px;
     height: 6px;
+    
     margin-left: 375px;
+}
+
+.dropbtn{
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  margin-left: -15px;
+  top: -200px;
+  
+  background: #000000;
+
+}
+
+
+.dropbtn {
+border: none;
+ }
+
+ .dropdown {
+   position: relative;
+   display: inline-block;
+ }
+
+ .dropdown-content {
+   font-weight: normal;
+   margin-right: -70px;
+   margin-top:-150px;
+   position: absolute;
+   background-color:blue;
+   min-width: 110px;
+   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+   z-index: 1;
+   right:0px;
+
+ }
+ .dropdown-content a {
+  padding: 8px 24px;
+  text-decoration: none;
+  display: block;
+  color: $text-base-color;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }

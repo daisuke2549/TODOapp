@@ -1,39 +1,45 @@
-  <head>
-    <title>Boards</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-     <%= stylesheet_link_tag 'board', media: 'all', 'data-turbolinks-track': 'reload' %>
-     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
-<header class="header">  
+<head>
+<title>Boards</title>
+<%= csrf_meta_tags %>
+<%= csp_meta_tag %>
+ <%= stylesheet_link_tag 'board', media: 'all', 'data-turbolinks-track': 'reload' %>
+ <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <div class="container">
-     <div class="title">
-     All Boards
-     </div>
-</div>
-</header>
-<% @boards.each do |board|%>
-  <div class="Rectangle">
-    <div class="to_do">
-        <div class="to_do_list">
-        <%= board.title %>
+  <h1 class="home-title">AllBoards</h1>
+  <div>
+    <% @boards.each do |board|%>
+      <div class="card">
+        <div class="card_in">
+           <div class="card_title">
+            <%= board.title %>
+           </div>
+          <div class="article_detail_actions">
+            <div class="dropdown">
+              <div class = 'dropbtn'>
+              <%= image_tag 'Oval.png' %>
+              </div>
+              <div class="dropdown-content">
+                <%= link_to 'Edit', edit_board_path(board.id) %>
+                <%= link_to 'Delete', board_path(board.id), data: { method: 'delete' } %>
+              </div>
+          </div>
         </div>
-        < class="edit_dropdown_btn"> 
-        <%= image_tag "Oval.jpg", alt: "Rails icon", class: "edit_dropdown", width: "30px" %>
-        <div class="dropdown-content mini">
-        <%= link_to '編集する', new_board_path(@board) %>
+      </div>
+          <div class="card_content"> 
+            <%= board.content %>
+          </div>
+          <div class="card_detail">
+            <%= image_tag 'Oval.png' %>
+          </div>
         </div>
-        </div>
-        </div>
-        <div class="todo_item">
-    <%= board.content %>
+      </div>
+    <% end %>
   </div>
-<% end %>
-</div>
-<%= link_to new_board_path do %>
-<div class ="Add_new"> 
-<p class="Add_new_title">+ Add new board</p>
-</div>
-<% end %>
+  <%= link_to new_board_path do %>
+    <div class="card_new">
+      <p class="card_new_title">+ Add new board</p>
+    </div>
+  <% end %>
 </div>

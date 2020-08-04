@@ -12,7 +12,7 @@
 <header class="header">  
 <div class="container">
      <div class="title">
-     All Boards
+     <h1>All Boards<h1>
      </div>
 </div>
 </header>
@@ -35,9 +35,12 @@
 </div>
 </div>
 <% end %>
+</div>
+<%= link_to new_board_path do %>
 <div class ="Add_new_board">
 <div class ="Add_new"> 
-<%= link_to 'Add new board', new_board_path(@board) %>
+<p class="card_new_title">+ Add new board</p>
+
 </div>
 </div>
 <%= yield %>
