@@ -1,5 +1,5 @@
  <div class="new_board">
-   <%= form_with(model: @board, url: board_new_path, local: true) do |f| %>
+   <%= form_with(model: @board, url: board_index_path, local: true) do |f| %>
      <div>
        <%= f.label :title, 'New Board', class: 'title_new_board' %>
      </div>

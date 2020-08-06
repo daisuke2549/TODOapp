@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   put '/board'    => 'boards#index'
   post '/board'    => 'boards#index'
   post '/board/new'    => 'boards#new'
-     
+  post '/board/new' => 'boards#new'
+
   resources :board, only:[:show, :new, :create, :edit, :update]
 end
 

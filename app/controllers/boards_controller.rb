@@ -1,7 +1,7 @@
 class BoardsController < ApplicationController
        
   def index
-    @boards = Board.all
+    @boards = Board.all.order(created_at: 'desc')
 
   def show
       @board = Board.find(params[:id])
