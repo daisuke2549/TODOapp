@@ -5,17 +5,16 @@ class BoardsController < ApplicationController
   end 
 
   def show
-      @board = Board.find(params[:id])
+      @boards = Board.find(params[:id])
   end
 
   def new
-     @board = Board.new
+     @boards = Board.new
   end
 
 
     def create
-      binding.pry
-      @board = Board.new(board_params)
+      @boards = Board.new(board_params)
       
       if @board.save
         redirect_to board_path(@board), notice: '保存できたよ'

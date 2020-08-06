@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   post '/board'    => 'boards#index'
   post '/board/new'    => 'boards#new'
   post '/board/new' => 'boards#new'
+  get '/board/:id' => 'boards#show'
 
   resources :board, only:[:show, :new, :create, :edit, :update]
 end
