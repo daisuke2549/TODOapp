@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   get '/board/:id/edit' => 'boards#edit'
   put '/board'    => 'boards#index'
   post '/board'    => 'boards#index'
-  post '/board/new'    => 'boards#new'
-  post '/board/new' => 'boards#new'
+  post '/board/new' => 'boards#create'
   get '/board/:id' => 'boards#show'
 
   resources :board, only:[:show, :new, :create, :edit, :update]
