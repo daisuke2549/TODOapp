@@ -5,6 +5,7 @@ class BoardsController < ApplicationController
   end 
 
   def show
+    
       @boards = Board.find(params[:id])
   end
 
@@ -14,23 +15,22 @@ class BoardsController < ApplicationController
 
 
     def create
-      @boards = Board.new(board_params)
       
+      @boards = Board.new(board_params)
       if @board.save
         redirect_to board_path(@board), notice: '保存できたよ'
       else
         flash.now[:error] = '保存に失敗しました'
         render :new
       end
-      
     end
-
 
     def edit
     @board = Board.find(params[:id])
     end
 
     def update
+    binding.pry
     @board = Board.find(params[:id])
      if @board.update(board_params)
        redirect_to board_path(@board), notice: '更新できました'
