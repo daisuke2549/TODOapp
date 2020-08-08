@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Boards</title>
+    <title>TODOapp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
      <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -12,6 +12,9 @@
    <body>
      <header class="header">
        <p class="header_pageTitle">Boards</p>
+       <div class = 'header_pageTitle_img'>
+       <%= image_tag 'Oval.png' %>
+       </div>
        <hr class="border"></hr>
      </header> 
      <%= yield %>

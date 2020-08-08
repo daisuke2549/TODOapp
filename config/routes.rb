@@ -2,14 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: 'boards#index'
-  
-  resources :boards do
-  resources :board, only:[:show, :new, :create, :edit, :update]
+  resources :boards
 end
-
-  
+ 
 #posts#index の posts は、これから作成する controller の名前で、
 #index は、controller に設定する関数名だ。
-end
-
-
