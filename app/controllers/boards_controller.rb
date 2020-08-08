@@ -8,11 +8,14 @@ class BoardsController < ApplicationController
       @boards = Board.find(params[:id])
   end
 
+  def new
+    @board = Board.new
+  end
+
 
 
    def create
-    binding.pry
-    @boards = Board.new(params[:id])
+    @board = Board.new(board_params)
       if @board.save!
         redirect_to boards_path(@board), notice: '保存できたよ'
       else
@@ -43,7 +46,7 @@ class BoardsController < ApplicationController
 
     private
     def board_params
-      params.require(:article).permit(:title, :content)
+      params.require(:board).permit(:title, :content)
     end
 
   def set_board
