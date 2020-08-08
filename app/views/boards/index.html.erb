@@ -18,11 +18,11 @@
           <div class="article_detail_actions">
             <div class="dropdown">
               <div class = 'dropbtn'>
-              <%= image_tag 'Oval.png' %>
+              <a href="#" class="btn-circle-flat"></a>
               </div>
               <div class="dropdown-content">
                 <%= link_to 'Edit', edit_board_path(board.id) %>
-                <%= link_to 'Delete', board_path(board.id), data: { method: 'delete' } %>
+                <%= link_to 'Delete', board_path(board), data: { method: 'delete' } %>
               </div>
           </div>
         </div>

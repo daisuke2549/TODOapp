@@ -5,24 +5,19 @@ class BoardsController < ApplicationController
   end 
 
   def show
-    
       @boards = Board.find(params[:id])
   end
 
-  def new
-     @boards = Board.new
-  end
 
 
-    def create
-      
-      @boards = Board.new(board_params)
-      if @board.save
-        redirect_to board_path(@board), notice: '保存できたよ'
+   def create
+    binding.pry
+    @boards = Board.new(params[:id])
+      if @board.save!
+        redirect_to boards_path(@board), notice: '保存できたよ'
       else
         flash.now[:error] = '保存に失敗しました'
         render :new
-      end
     end
 
     def edit
@@ -30,19 +25,30 @@ class BoardsController < ApplicationController
     end
 
     def update
-    binding.pry
     @board = Board.find(params[:id])
      if @board.update(board_params)
        redirect_to board_path(@board), notice: '更新できました'
      else
        flash.now[:error] = '更新できませんでした'
        render :edit
-     end
-   end
+    end
+
+
+  def destroy
+    board = Board.find(params[:id])
+    board.destroy
+    redirect_to root_path, notice: '削除に成功しました'
+  end
 
 
     private
     def board_params
-      params.require(:board).permit(:title, :content)
+      params.require(:article).permit(:title, :content)
     end
+
+  def set_board
+    @board = Board.find(params[:id])
+  end
+end
+end
 end
