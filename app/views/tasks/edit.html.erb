@@ -1,0 +1,25 @@
+<div class="new_board">
+<ul>
+<% @task.errors.full_messages.each do |message| %>
+  <li><%= message %></li>
+<% end %>
+</ul>
+<%= form_with(model: @task, url: tasks_path, method: 'put', local: true) do |f| %>
+  <div>
+    <%= f.label :title, 'New Board', class: 'title_new_board' %>
+  </div>
+  <div>
+    <%= f.label :title, 'Content' , class: 'new_board_name'%>
+  </div>
+  <div>
+    <%= f.text_field :title, class: 'text_field' %>
+  </div>
+  <div>
+    <%= f.label :content, 'Description', class:'Description'  %>
+  </div>
+  <div>
+    <%= f.text_area :content %>
+  </div>
+  <%= f.submit '保存', class: 'btn-primary' %>
+<% end %>
+</div>
