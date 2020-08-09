@@ -19,6 +19,7 @@ class BoardsController < ApplicationController
       else
         flash.now[:error] = '保存に失敗しました'
         render :new
+      end  
   end
 
   def edit
@@ -32,6 +33,7 @@ class BoardsController < ApplicationController
     else
       flash.now[:error] = '更新できませんでした'
       render :edit
+    end
   end
 
   def destroy
