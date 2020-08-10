@@ -60,7 +60,6 @@ height: 6px;
 left: 352px;
 top: 200px;
 
-background: #000000;
 }
 
 .card_content{
@@ -93,19 +92,6 @@ mix-blend-mode: normal;
     background: #FFFFFF;
     border: 1px dashed rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
-}
-.card_detail{
-    position: absolute;
-width: 30px;
-height: 30px;
-left: 5px;
-top: 110px;
-display: flex;
-}
-
-
-.card_new{
     position: absolute;
     height: 155px;
     left: 3.5%;
@@ -123,8 +109,17 @@ display: flex;
 p{
   margin-top:55px;
 }    
-
 }
+.card_detail{
+    position: absolute;
+width: 30px;
+height: 30px;
+left: 5px;
+top: 110px;
+display: flex;
+}
+
+
 
 
 .edit_dropdown_btn{
