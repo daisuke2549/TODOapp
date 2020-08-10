@@ -4,7 +4,6 @@
 
 @import 'variables';
 .container h1 {
-
     position: absolute;
     height: 36px;
     left: 26px;
@@ -18,8 +17,6 @@
     font-size: 26px;
     line-height: 36px;
     /* identical to box height */
-    
-    
     color: #000000;
 }
 
@@ -36,51 +33,41 @@
 
 .card_title{
     position: absolute;
-height: 25px;
-left: 0%;
-right: 76.79%;
-top: calc(50% - 25px/2 - 12.5px);
-
-font-family: Avenir;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 1px;
+    height: 25px;
+    left: 0%;
+    right: 76.79%;
+    top: calc(50% - 25px/2 - 12.5px);
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1px;
 /* identical to box height */
-
-
-
-color:black;
+    color:black;
 }
 
 .article_detail_actions{
     position: absolute;
-width: 6px;
-height: 6px;
-left: 352px;
-top: 200px;
-
-background: #000000;
+    width: 6px;
+    height: 6px;
+    left: 352px;
+    top: 200px;
 }
 
 .card_content{
-position: absolute;
-height: 21px;
-left: 0%;
-right: 0%;
-top: calc(50% - 19px/2 + 15.5px);
-
-font-family: Avenir;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 0px;
-
-color: #000000;
-
-mix-blend-mode: normal;
+    position: absolute;
+    height: 21px;
+    left: 0%;
+    right: 0%;
+    top: calc(50% - 19px/2 + 15.5px);
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 0px;
+    color: #000000;
+    mix-blend-mode: normal;
 }
-
 
 
 .card_new{
@@ -89,29 +76,14 @@ mix-blend-mode: normal;
     height: 160px;
     left: 30px;
     top: 348px;
-    
     background: #FFFFFF;
     border: 1px dashed rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-
-}
-.card_detail{
-    position: absolute;
-width: 30px;
-height: 30px;
-left: 5px;
-top: 110px;
-display: flex;
-}
-
-
-.card_new{
     position: absolute;
     height: 155px;
     left: 3.5%;
     right: 0.35%;
     top: calc(50% - 25px/2);
-    
     font-family: Avenir;
     font-style: normal;
     font-weight: normal;
@@ -119,75 +91,80 @@ display: flex;
     line-height: 25px;
     text-align: center;
     color: #000000;    
-
-p{
-  margin-top:55px;
-}    
-
+    p{
+      margin-top:55px;
+    }    
 }
 
+.card_detail{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    left: 5px;
+    top: 110px;
+    display: flex;
+}
 
 .edit_dropdown_btn{
     margin-top:66px;
     width: 6px;
     height: 6px;
-    
     margin-left: 375px;
 }
 
 .dropbtn{
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  margin-left: -15px;
-  top: -160px;
-  margin-left:30px;
-  background: #000000;
-
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin-left: -15px;
+    top: -160px;
+    margin-left:30px;
+    background: #000000;
 }
 
 
-.dropbtn {
-border: none;
+.dropbtn{
+    border: none;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    font-weight: normal;
+    margin-right: -70px;
+    margin-top:-150px;
+    position: absolute;
+    background-color:blue;
+    min-width: 110px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    right:0px;
+    display:none;
  }
 
- .dropdown {
-   position: relative;
-   display: inline-block;
- }
-
- .dropdown-content {
-   font-weight: normal;
-   margin-right: -70px;
-   margin-top:-150px;
-   position: absolute;
-   background-color:blue;
-   min-width: 110px;
-   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-   z-index: 1;
-   right:0px;
-   display:none;
- }
- .dropdown-content a {
-  padding: 8px 24px;
-  text-decoration: none;
-  display: block;
-  color: $text-base-color;
+ .dropdown-content a{
+    padding: 8px 24px;
+    text-decoration: none;
+    display: block;
+    color: $text-base-color;
 }
 
 .dropdown-content a:hover {
-  background-color: white;
+    background-color: white;
 }
 
 .dropdown:hover .dropdown-content {
-  display: block;
+    display: block;
 }
 
 .header_pageTitle_img{
-  position: absolute;
-width: 40px;
-height: 40px;
-left: 437px;
-top: 10px;
-background: url(Image.png);
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 437px;
+    top: 10px;
+    background: url(Image.png);
 }
