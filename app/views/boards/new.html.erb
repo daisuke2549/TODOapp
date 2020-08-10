@@ -1,0 +1,19 @@
+ <div class="new_board">
+   <%= form_with(model: @board, url: boards_path, local: true) do |f| %>
+     <div>
+       <%= f.label :title, 'New Board', class: 'title_new_board' %>
+     </div>
+     <div class="input_form">
+       <%= f.label :title, 'Name' , class: 'new_board_name'%>
+     </div>
+     <div>
+       <%= f.text_field :title, class: 'text_field' %>
+     </div>
+     <div>
+       <%= f.label :content, 'Description', class:'Description'  %>
+     </div>
+     <div>
+       <%= f.text_area :content %>
+     <%= f.submit 'Submit', class: 'btn-primary' %>
+   <% end %>
+ </div>
