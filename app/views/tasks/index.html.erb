@@ -11,32 +11,29 @@
   <div>
     <% @tasks.each do |task|%>
       <div class="card">
-        <div class="card_in">
-           <div class="card_title">
+          <div class="card_title">
             <%= task.title %>
-           </div>
+          </div>
           <div class="article_detail_actions">
             <div class="dropdown">
               <div class = 'dropbtn'>
-              <a href="#" class="btn-circle-flat"></a>
+                <a href="#" class="btn-circle-flat"></a>
               </div>
               <div class="dropdown-content">
-              <%= link_to 'Edit', edit_task_path(task.id) %>
-              <%= link_to 'Delete', task_path(task), data: { method: 'delete' } %>
+                <%= link_to 'Edit', edit_task_path(task.id) %>
+                <%= link_to 'Delete', task_path(task), data: { method: 'delete' } %>
               </div>
+            </div>
           </div>
-        </div>
-</div>
           <div class="card_content"> 
             <%= task.content %>
           </div>
           <div class="card_content2"> 
-          <%= task.limit %>
+            <%= task.limit %>
           </div>
           <div class="card_detail">
             <%= image_tag 'Oval.png' %>
           </div>
-        </div>
       </div>
     <% end %>
   </div>

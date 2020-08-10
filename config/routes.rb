@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'boards#index'
   resources :boards
   resources :tasks
+  resources :comments
 end
  
 #posts#index の posts は、これから作成する controller の名前で、
