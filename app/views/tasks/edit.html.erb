@@ -4,7 +4,7 @@
   <li><%= message %></li>
 <% end %>
 </ul>
-<%= form_with(model: @task, url: tasks_path, method: 'put', local: true) do |f| %>
+<%= form_with(model: @task, url: task_path, method: 'put', local: true) do |f| %>
   <div>
     <%= f.label :title, 'New Board', class: 'title_new_board' %>
   </div>

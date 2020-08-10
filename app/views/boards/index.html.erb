@@ -11,7 +11,8 @@
   <div>
     <% @boards.each do |board|%>
       <div class="card">
-        <div class="card_in">
+      <%= link_to '記事詳細', edit_board_path(board.id)%>
+        <div class="">
            <div class="card_title">
             <%= board.title %>
            </div>

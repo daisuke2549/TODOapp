@@ -31,6 +31,7 @@
     top: 160px;
     border: 1px dashed rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .card_title{
@@ -44,7 +45,7 @@ font-family: Avenir;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
-line-height: 25px;
+line-height: 1px;
 /* identical to box height */
 
 
@@ -73,7 +74,7 @@ font-family: Avenir;
 font-style: normal;
 font-weight: normal;
 font-size: 12px;
-line-height: 19px;
+line-height: 0px;
 
 color: #000000;
 
@@ -100,6 +101,7 @@ width: 30px;
 height: 30px;
 left: 5px;
 top: 110px;
+display: flex;
 }
 
 
