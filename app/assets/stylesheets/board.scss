@@ -105,10 +105,10 @@ display: flex;
 }
 
 
-.card_new_title{
+.card_new{
     position: absolute;
-    height: 25px;
-    left: 0.35%;
+    height: 155px;
+    left: 3.5%;
     right: 0.35%;
     top: calc(50% - 25px/2);
     
@@ -117,12 +117,15 @@ display: flex;
     font-weight: normal;
     font-size: 14px;
     line-height: 25px;
-    /* identical to box height */
-    
     text-align: center;
-    
     color: #000000;    
+
+p{
+  margin-top:55px;
+}    
+
 }
+
 
 .edit_dropdown_btn{
     margin-top:66px;

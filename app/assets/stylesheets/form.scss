@@ -235,3 +235,51 @@ background: url(Image.png);
   
 
 }
+.task_board{
+  position: absolute;
+  width: 420px;
+  height: 161px;
+  left: 30px;
+  top: 261px;
+  
+  background: #F4F4F4;
+  border-radius: 10px;
+  
+}
+
+.task_picture{
+  margin-top:80px;
+  margin-left:24px;
+  margin-right:14px;
+  position: absolute;
+  width: 500px;
+  border-radius: 8px;
+  background: url(Image.png);
+border-radius: 8px;
+
+img {
+  width: 430px;
+  height:160px;
+  border-radius: 8px;
+  background: url(Image.png);
+border-radius: 8px;
+}
+}
+
+.show_comment{
+  position: absolute;
+height: 36px;
+left: 0%;
+right: 0%;
+top: calc(56% - 2px/2);
+
+font-family: Avenir;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 36px;
+/* identical to box height */
+
+color: #000000;
+
+}
