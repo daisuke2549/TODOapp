@@ -17,3 +17,10 @@
 <div class="show_comment">
 Comment
 </div>
+<% @comments.each do |comment|%>
+  <div class="card_title">
+    <div class="task_title">
+        <%= comment.body %>
+    </div> 
+    <% end %>
+  </div>
