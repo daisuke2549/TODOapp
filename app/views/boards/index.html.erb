@@ -1,35 +1,34 @@
 <div class="container">
-  <h1 class="home-title">AllBoards</h1>
-  <div>
+  <h1 class="home-title">All Board</h1>
     <% @boards.each do |board|%>
-        <div class="card">
-           <div class="card_title">
+      <div class="card_title">
+        <div class="task_title">
             <%= board.title %>
-           </div>
+        </div>  
           <div class="article_detail_actions">
-            <div class="dropdown">
-              <div class = 'dropbtn'>
-              <a href="#" class="btn-circle-flat"></a>
+              <div class="dropdown">
+                <div class = 'dropbtn'>
+                  <a href="#" class="btn-circle-flat"></a>
+                </div>
+                <div class="dropdown-content">
+                  <%= link_to 'Edit', edit_board_path(board.id) %>
+                  <%= link_to 'Delete', board_path(board), data: { method: 'delete' } %>
+                </div>
               </div>
-              <div class="dropdown-content">
-                <%= link_to 'Edit', edit_board_path(board.id) %>
-                <%= link_to 'Delete', board_path(board), data: { method: 'delete' } %>
-              </div>
-          </div>
-        </div>
-          <div class="card_content"> 
-            <%= board.content %>
-          </div>
-          <div class="card_detail">
-            <%= image_tag 'Oval.png' %>
-          </div>
-        </div>
+            </div>
+            <div class="card_content"> 
+              <%= board.content %>
+            </div>
+            <div class="card_detail">
+              <%= image_tag 'Oval.png' %>
+            </div>
+          </div> 
+        <% end %>
       </div>
-    <% end %>
-  </div>
   <%= link_to new_board_path do %>
     <div class="card_new">
-      <p class="card_new_title">+ Add new board</p>
+      <p class="card_new_title">+ Add new task</p>
     </div>
   <% end %>
 </div>
+
