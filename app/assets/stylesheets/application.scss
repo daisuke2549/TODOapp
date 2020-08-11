@@ -14,13 +14,11 @@
  *= require_self
  */
 
-
- @import 'variables';
- @import 'board';
- @import 'comments';
- @import 'form';
- @import 'tasks';
-
+// @import 'variables';
+// @import 'comments';
+// @import 'form';
+// @import 'tasks';
+@import 'board';
 
 html{
     word-spacing: 1px;
