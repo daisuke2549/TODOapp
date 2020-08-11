@@ -1,11 +1,10 @@
 <div class="container">
   <h1 class="home-title">TodoList</h1>
-  <div>
     <% @tasks.each do |task|%>
-      <div class="card">
-          <div class="card_title">
+      <div class="card_title">
+          <div class="task_title">
             <%= task.title %>
-          </div>
+          </div>  
           <div class="article_detail_actions">
             <div class="dropdown">
               <div class = 'dropbtn'>
@@ -26,7 +25,7 @@
           <div class="card_detail">
             <%= image_tag 'Oval.png' %>
           </div>
-      </div>
+      </div>   
     <% end %>
   </div>
   <%= link_to new_task_path do %>
