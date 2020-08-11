@@ -1,21 +1,24 @@
 class CommentsController < ApplicationController
 
   def new
-    @comment = Comment.new
+    task = Task.find(params[:task_id])
+    @comment = task.comments.build
   end
 
   def create
-    @comment = Comment.new(comment_params)
-      if @comment.save!
-        redirect_to tasks_path(@task), notice: '保存できました'
-      else
-        flash.now[:error] = '保存に失敗しました'
-        render :new
-      end
+    task = Task.find(params[:task_id])
+    comment = task.comments.build(omment_params)
+    if comment.save
+      redirect_to task_path(task), notice:'コメントを追加'
+    else
+      flash.now[:error] = '更新できませんでした'
+      render :new
     end
+  end
+
 
   private 
-    def comment_params
-      params.require(:comment).permit(:body)
-    end
+  def comment_params
+    params.require(:comment).permit(:body)
+  end
 end
