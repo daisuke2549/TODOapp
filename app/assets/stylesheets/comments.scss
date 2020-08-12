@@ -17,15 +17,44 @@
 }
 
 .task_title{
-    color:red;
-    top:440px;
+    top:25px;
     position: relative;
     height: 25px;
-    left:20px;
+
 
     font-family: Avenir;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 25px;
+}
+
+.task_title_comment{
+    top:420px;
+    position: relative;
+    height: 25px;
+
+
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.show_comment_list{
+    position: absolute;
+    height: 36px;
+    left: 1.5%;
+    right: 0%;
+    top: 450px;
+    
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 36px;
+    /* identical to box height */
+    
+    color: #000000;
 }
