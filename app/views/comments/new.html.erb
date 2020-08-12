@@ -1,10 +1,10 @@
 <div class="new_board">
-<%= form_with(model: @comment, url: tasks_path(@comment.Task), local: true) do |f| %>
+<%= form_with(model: @comment, url: task_comments_path(@comment.task), local: true) do |f| %>
   <div>
-    <%= f.label :content, 'New Comment', class:'New_comment' %>
+    <%= f.label :body, 'New Comment', class:'New_comment' %>
   </div>
   <div>
-    <%= f.text_area :content %>
+    <%= f.text_area :body %>
   <%= f.submit 'Submit', class: 'btn-primary' %>
 <% end %>
 </div>
