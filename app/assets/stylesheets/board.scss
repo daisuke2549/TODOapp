@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
 @import 'variables';
-.container h1 {
+.home-title {
     position: absolute;
     height: 36px;
     left: 26px;
@@ -14,7 +14,7 @@
     font-family: Avenir;
     font-style: normal;
     font-weight: 800;
-    font-size: 26px;
+    font-size: 20px;
     line-height: 36px;
     /* identical to box height */
     color: #000000;
@@ -44,7 +44,7 @@
 .card_content{
     height: 19px;
     right: 0%;
-    margin-top:5px;
+    margin-top:50px;
     font-family: Avenir;
     font-style: normal;
     font-weight: normal;
