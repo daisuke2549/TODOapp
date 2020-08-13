@@ -14,6 +14,12 @@
   </div>
   <div>
     <%= f.text_area :content %>
+  <div class="input_form">
+    <%= f.label :limit, '期限' , class: 'limit'%>
+  </div>
+  <div>
+    <%= f.text_field :limit, class: 'text_field' %>
+  </div>
   <%= f.submit 'Submit', class: 'btn-primary' %>
 <% end %>
 </div>

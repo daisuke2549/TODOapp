@@ -1,6 +1,7 @@
 <div class="container">
   <h1 class="home-title">TodoList</h1>
     <% @tasks.each do |task|%>
+    <%= link_to task_path(task) do %>
       <div class="card_title">
         <div class="task_title">
             <%= task.title %>
@@ -8,14 +9,13 @@
           <div class="article_detail_actions">
               <div class="dropdown">
                 <div class = 'dropbtn'>
-                  <a href="#" class="btn-circle-flat"></a>
+                  <a href="#" div class="btn-circle-flat"></a>
                 </div>
                 <div class="dropdown-content">
                   <%= link_to 'Edit', edit_task_path(task.id) %>
                   <%= link_to 'Delete', task_path(task), data: { method: 'delete' } %>
                 </div>
               </div>
-            </div>
             <div class="card_content"> 
               <%= task.content %>
             </div>
@@ -27,8 +27,9 @@
             </div>
           </div> 
         <% end %>
+       <% end %>
       </div>
-  <%= link_to new_task_path do %>
+     <%= link_to new_task_path do %>
     <div class="card_new">
       <p class="card_new_title">+ Add new task</p>
     </div>

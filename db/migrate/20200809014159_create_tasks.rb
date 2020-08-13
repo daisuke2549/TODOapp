@@ -4,7 +4,6 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.string :title
       t.text :content
       t.string :limit
-
       t.timestamps
     end
   end
