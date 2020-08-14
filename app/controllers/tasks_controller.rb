@@ -1,5 +1,4 @@
 class TasksController < ApplicationController
-
   def index
     @tasks = Task.all
   end
@@ -8,7 +7,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @comments = @task.comments
   end
- 
+
   def new
     @task = Task.new
   end
@@ -44,11 +43,12 @@ class TasksController < ApplicationController
   end
 
   private
+
   def task_params
     params.require(:task).permit(:title, :content, :limit)
   end
 
-  def set_task 
+  def set_task
     @task = Task.find(params[:id])
   end
 end
