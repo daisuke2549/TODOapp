@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-
   def new
     task = Task.find(params[:task_id])
     @comment = task.comments.build
@@ -16,7 +15,8 @@ class CommentsController < ApplicationController
     end
   end
 
-  private 
+  private
+
   def comment_params
     params.require(:comment).permit(:body)
   end

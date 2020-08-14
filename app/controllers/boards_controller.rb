@@ -1,8 +1,7 @@
 class BoardsController < ApplicationController
-       
   def index
     @boards = Board.all
-  end 
+  end
 
   def show
     @boards = Board.find(params[:id])
@@ -14,12 +13,12 @@ class BoardsController < ApplicationController
 
   def create
     @board = Board.new(board_params)
-      if @board.save!
-        redirect_to boards_path(@board), notice: '保存できました'
-      else
-        flash.now[:error] = '保存に失敗しました'
-        render :new
-      end  
+    if @board.save!
+      redirect_to boards_path(@board), notice: '保存できました'
+    else
+      flash.now[:error] = '保存に失敗しました'
+      render :new
+    end
   end
 
   def edit
@@ -42,7 +41,8 @@ class BoardsController < ApplicationController
     redirect_to root_path, notice: '削除に成功しました'
   end
 
-private
+  private
+
   def board_params
     params.require(:board).permit(:title, :content)
   end
