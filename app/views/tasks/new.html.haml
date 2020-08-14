@@ -1,0 +1,17 @@
+.new_board
+  = form_with(model: @task, url: tasks_path, local: true) do |f|
+    %div
+      = f.label :title, 'New task', class: 'title_new_board'
+    .input_form
+      = f.label :title, 'Content' , class: 'new_board_name'
+    %div
+      = f.text_field :title, class: 'text_field'
+    %div
+      = f.label :content, 'Description', class:'Description'
+    %div
+      = f.text_area :content
+      .input_form
+        = f.label :limit, '期限' , class: 'limit'
+      %div
+        = f.text_field :limit, class: 'text_field'
+      = f.submit 'Submit', class: 'btn-primary'
