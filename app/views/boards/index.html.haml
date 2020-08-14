@@ -1,0 +1,20 @@
+.container
+  .home-title All Board
+  - @boards.each do |board|
+    .card_title
+      .task_title
+        = board.title
+      .article_detail_actions
+        .dropdown
+          .dropbtn
+            %a.btn-circle-flat{:href => "#"}
+          .dropdown-content
+            = link_to 'Edit', edit_board_path(board.id)
+            = link_to 'Delete', board_path(board), data: { method: 'delete' }
+      .card_content
+        = board.content
+      .card_detail
+        = image_tag 'Oval.png'
+= link_to new_board_path do
+  .card_new
+    %p.card_new_title + Add new task
