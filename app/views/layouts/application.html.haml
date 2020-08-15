@@ -14,10 +14,7 @@
       %p.header_pageTitle Boards
       .header_pageTitle_img
         = image_tag 'Oval.png'
-        .dropdown-content2
-        %a{:href => "#"} プロフィール
-        = link_to 'ログアウト', destroy_user_session_path, data: { method: 'delete' }
-  - else
-    = link_to 'ログイン', new_user_session_path, class: 'header_loginBtn'  
-      %hr.border/
-    = yield
+      .dropdown-content2
+        = link_to 'ログアウト, edit_board_path(board.id)
+          %hr.border/
+      = yield
