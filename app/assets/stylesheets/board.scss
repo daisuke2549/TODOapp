@@ -53,10 +53,47 @@
     color: #000000
 }
 
+.task_content{
+    height: 19px;
+    right: 0%;
+    margin-top:15px;
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #000000
+}
+
+
 .card_new{
     width: 430px;
     height: 160px;
     margin-top: 488px;
+    background: #FFFFFF;
+    border: 1px dashed rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    height: 155px;
+    left: 1.1%;
+    right: 0.35%;
+    top: calc(50% - 25px/2);
+    font-family: Avenir;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 25px;
+    text-align: center;
+    color: #000000;    
+    p{
+      margin-top:55px;
+    }    
+}
+
+.task_add_new{
+    width: 430px;
+    height: 160px;
+    margin-top: 1000px;
     background: #FFFFFF;
     border: 1px dashed rgba(0, 0, 0, 0.2);
     border-radius: 10px;

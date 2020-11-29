@@ -2,19 +2,15 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Boards
     %title TODOapp
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %link{:crossorigin => "anonymous", :href => "https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css", :rel => "stylesheet"}/
   %body
     %header.header
       %p.header_pageTitle Boards
       .header_pageTitle_img
         = image_tag 'Oval.png'
-      .dropdown-content2
-        = link_to 'ログアウト, edit_board_path(board.id)
-          %hr.border/
-      = yield
+      %hr.border/
+    = yield
